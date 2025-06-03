@@ -1,4 +1,3 @@
-import React from 'react';
 import { navigateToShop } from '../../utils/subdomain';
 
 const Profile = ({ user, onClose, onLogout }) => {

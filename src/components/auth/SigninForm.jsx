@@ -53,9 +53,9 @@ const SigninForm = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6">
-      <div className="max-w-md w-full space-y-8">
+      <div className="max-w-md w-full space-y-8 border bg-white p-12 rounded-xl shadow-md">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-center text-4xl font-extrabold text-gray-900">
             Sign in to your account
           </h2>
         </div>
@@ -73,8 +73,8 @@ const SigninForm = () => {
           )}
 
           <div className="rounded-md shadow-sm -space-y-px">
-            <div>
-              <label htmlFor="username" className="sr-only">
+            <div className='mb-4 flex flex-col gap-1'>
+              <label htmlFor="username" className="font-semibold">
                 Username
               </label>
               <input
@@ -82,14 +82,14 @@ const SigninForm = () => {
                 name="username"
                 type="text"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                 placeholder="Username"
                 value={formData.username}
                 onChange={handleChange}
               />
             </div>
-            <div>
-              <label htmlFor="password" className="sr-only">
+            <div className='mb-4 flex flex-col gap-1'>
+              <label htmlFor="password" className="font-semibold">
                 Password
               </label>
               <input
@@ -97,7 +97,7 @@ const SigninForm = () => {
                 name="password"
                 type="password"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                className="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
                 value={formData.password}
                 onChange={handleChange}

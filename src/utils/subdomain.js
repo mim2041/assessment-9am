@@ -1,18 +1,19 @@
 export const getSubdomain = () => {
-    const hostname = window.location.hostname;
-    const parts = hostname.split('.');
+  const hostname = window.location.hostname;
+  const parts = hostname.split(".");
 
-    if(parts.length > 1 && parts[0] != 'localhost') {
-        return parts[0];
-    }
+  // If we have a subdomain (e.g., shop.localhost)
+  if (parts.length > 1 && parts[0] !== "localhost") {
+    return parts[0];
+  }
 
-    return null;
-}
+  return null;
+};
 
-export const navigateToShop = (shopname) => {
-    window.location.href = `https://${shopname}.localhost:5173`;
-}
+export const navigateToShop = (shopName) => {
+  window.location.href = `http://${shopName}.localhost:5173`;
+};
 
 export const navigateToMain = () => {
-    window.location.href = `https://localhost:5173`;
-}
+  window.location.href = "http://localhost:5173";
+};

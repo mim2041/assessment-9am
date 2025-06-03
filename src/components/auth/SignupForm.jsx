@@ -100,7 +100,7 @@ const SignupForm = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6">
-      <div className="max-w-md w-full space-y-8">
+      <div className="max-w-lg w-full space-y-8 border bg-white p-12 rounded-xl shadow-md">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Create your account
@@ -115,7 +115,7 @@ const SignupForm = () => {
 
           <div className="rounded-md shadow-sm -space-y-px">
             <div className="mb-4">
-              <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="username" className="block font-semibold text-gray-700 mb-1 ml-1">
                 Username
               </label>
               <input
@@ -129,7 +129,7 @@ const SignupForm = () => {
             </div>
 
             <div className="mb-4">
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block font-semibold text-gray-700 mb-1 ml-1">
                 Password
               </label>
               <input
@@ -137,21 +137,21 @@ const SignupForm = () => {
                 type="password"
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full border px-3 py-2 rounded-md"
+                className="w-full border px-3 py-2 rounded-md mb-4"
               />
               {errors.password && <p className="text-sm text-red-600">{errors.password}</p>}
             </div>
 
             {[0, 1, 2, 3].map((index) => (
               <div key={index} className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">
+                <label className="block font-semibold text-gray-700 mb-1 ml-1">
                   Shop Name {index + 1}
                 </label>
                 <input
                   type="text"
                   value={formData.shopNames[index]}
                   onChange={(e) => handleShopNameChange(index, e.target.value)}
-                  className="w-full border px-3 py-2 rounded-md"
+                  className="w-full border px-3 py-2 rounded-md mb-4"
                 />
                 {errors[`shopName${index}`] && (
                   <p className="text-sm text-red-600">{errors[`shopName${index}`]}</p>
@@ -166,7 +166,7 @@ const SignupForm = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 "
             >
               {loading ? 'Creating account...' : 'Sign Up'}
             </button>
